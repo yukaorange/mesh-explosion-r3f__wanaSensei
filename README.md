@@ -7,3 +7,7 @@ yarn dev
 
 ```
 
+# create gltfjsx
+```
+npx gltfjsx public/models/diamond.glb -o src/components/Diamond.tsx -r public --types
+```
