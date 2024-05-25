@@ -27,3 +27,5 @@ npx gltfjsx public/models/diamond.glb -o src/components/Diamond.tsx -r public --
 ```
 
 ![image](https://github.com/yukaorange/mesh-explosion-r3f__wanaSensei/assets/98954503/67df0995-ee30-487b-aa25-9caa95322fd1)
+
+[deproy](https://mesh-explosion-r3f-wana-sensei.vercel.app/)
