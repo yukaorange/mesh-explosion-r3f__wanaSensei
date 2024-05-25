@@ -57,7 +57,16 @@ type ContextType = Record<
   React.ForwardRefExoticComponent<JSX.IntrinsicElements["mesh"]>
 >;
 
-export const Diamond = (props: JSX.IntrinsicElements["group"]) => {
+export const Diamond = ({
+  radius = 1,
+  speed = 1,
+  origin = new THREE.Vector3(0 + 90, 0, 0 + 90),
+  ...props
+}: JSX.IntrinsicElements["group"] & {
+  radius: number;
+  speed: number;
+  origin: THREE.Vector3;
+}) => {
   const { nodes, materials } = useGLTF("/models/diamond.glb") as GLTFResult;
 
   const group = useRef<THREE.Group>(null);
@@ -65,9 +74,9 @@ export const Diamond = (props: JSX.IntrinsicElements["group"]) => {
   useExplode(group, { distance: 8 });
 
   useOrbit(group, {
-    radius: 1,
-    speed: 1,
-    origin: new THREE.Vector3(0 + 90, 0, 0 + 90),
+    radius,
+    speed,
+    origin,
   });
 
   return (
