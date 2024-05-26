@@ -1,0 +1,12 @@
+@use "./../mixin/" as *;
+
+.button-menu {
+  position: fixed;
+  z-index: 100;
+  bottom: 2rem;
+  border: 0.1rem solid var(--white-1);
+  text-transform: uppercase;
+  padding: 0.8rem 1.6rem 1.1rem;
+  right: calc(var(--col) * 2);
+  color: var(--white-1);
+}
